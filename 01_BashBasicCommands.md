@@ -1,10 +1,3 @@
-
-````md
-
-This document covers the basic Linux commands and Node.js tools I studied on Day 1 while working in **Ubuntu / WSL**.
-
----
-
 ## 1. `pwd` — Print Working Directory
 Displays the absolute path of the current directory.
 
@@ -194,9 +187,6 @@ or press:
 ```text
 Ctrl + D
 ```
-
-
-📌 *This file documents my Day 1 progress while learning Linux, Bash, and Node.js using Ubuntu (WSL).*
 
 ```
 
