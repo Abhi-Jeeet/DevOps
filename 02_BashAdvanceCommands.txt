@@ -1,0 +1,146 @@
+ls -l
+ls -R -> Recursively, folder ke andar subfolders or files ka details
+
+ls -t newdir
+ls -lt newdir -> when modified, last modified at the top, first modified at the bottom
+
+ls -la -> to show the hidden files
+ ls -lRa -> recursively , folder within folder/files details including hidden files
+ls -lr -> modifies
+ls -s -> according to size
+ls -lR | grep .js ->recursively finding the files name having js 
+ls *.json -> all the json files within the directories
+ls bash*
+ls -a .. -> can able to see the present files or folders of one previous
+
+ubuntu -> bash -> ls -a .. -> i am able to see the files and folders present in the ubuntu directory, but i am in the bash folder
+
+cat -> concatenate
+cat > bash.txt -> simply can able to add the details directly into the bash.txt
+cat bash.txt -> can able to see the content of the file
+cat >> bash.txt -> Able to append in the file
+mkdir -p frontend/scripts -> Creating folder recursively
+
+cp -r foldername -> Recursively copying the folder
+
+rm -r foldername -> delete the whole folder 
+
+chmod
+chmod -> change file permission, read write and execute 
+
+chmod u/g/o u -> user, g -> group, o -> other + -> to add the permission, - -> to remove the permission
+
+files -> chmod u+x filename
+folder -> chmod -r u+x foldername
+
+chmod u+x filename--> giving executable permissions to user
+
+num code 
+4 -> read
+2-> write
+1 -> read
+
+if i have to give the combined command -> like read + write
+4+2 -> 6
+
+Echo -> to print the words 
+
+head -> to print the first ten lines
+tail -> to print the last ten lines
+
+head -3 filename -> to print the three line from the top
+tail -4 filename -> to print the 4 line from the bottom
+
+tail -n +4 file.txt | head -n 7 -> starting from line 4 goes till next 7 lines
+four
+five
+six
+seven
+eight
+nine
+ten
+
+head -n 15 file.txt | tail -n 2 -> first 15 lines, 2 from end 
+14
+15
+
+wc -> word count
+
+grep -> This command is used to find the word patterns, regex.
+
+grep -c "1" file.txt -> no. of line in which this occurs
+
+grep -h "2" file.txt -> the exact words or numbers shows with highliting
+12
+20
+
+grep -hi "one" file.txt -> -hi ignores the case sensitive
+One
+ONE
+OnE
+one
+
+
+grep -hin "2" file.txt -> -h -> gives the actual numbers, i-> ignores the case sensitive and n -> give the exact number of line where it present (numbering)
+15:12
+23:20
+
+Use grep "one" → when substring match is OK
+
+Use grep -w "one" → when you want exact words
+
+Use grep -o "one" → when you only need the matched
+
+history -> to see all the history whatever command i have executed
+
+
+grep -v "error" filename - this will show excluding error
+info test passed
+info test 2 passed
+
+grep -A 1 error log.txt -> -A after context, print the match line, then 1 line after
+error failed 1st attemp
+info test 2 passed
+error failed 2nd attemp
+
+grep -B 1 error log.txt -> -B before context, print the match line and the line before
+info test passed
+error failed 1st attemp
+info test 2 passed
+error failed 2nd attempt
+
+grep -C 1 error log.txt -> -C both sides, print the match line and write the both side before and after
+info test passed
+error failed 1st attemp
+info test 2 passed
+error failed 2nd attempt
+
+
+sed [OPTIONS] SCRIPT FILE ...
+
+The sed's substitute command has the following structure:
+'s/pattern/replacement/'
+
+sed -n '/Error/ p' log.txt
+sed 's/ERROR/CRITICAL/' log.txt
+sed -ibackup 's/ERROR/CRITICAL/' log.txt
+sed '3 s/ERROR/CRITICAL/' log.txt
+sed '3,5 s/ERROR/CRITICAL/' log.txt
+sed -n '3,/ERROR/ p' log.txt
+
+
+awk
+awk [options] script file
+
+How patterns are define: '(pattern) {action}'
+awk '/ERROR/{print $0}' log.txt
+awk '{gsub(/ERROR/, "CRITICAL") }{print}' log.txt
+awk 'BEGIN {print "LOG SUMMARY\n- "} {print} END {print "
+\nEND OF LOG SUMMARY"}' log.txt
+awk '{print $1, $?}' log.txt
+awk -F "," '{print $1, $2}' log.txt
+awk ' {count[$2]++} END {print count["ERROR"]}' log.txt
+awk '{ if ($1 > 1598863888 ) {print $0} }' log.txt
+
+
+
