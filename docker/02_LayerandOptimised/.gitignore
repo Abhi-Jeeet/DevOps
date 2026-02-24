@@ -1,0 +1,35 @@
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+
+# Build / output
+dist/
+build/
+coverage/
+.nyc_output/
+
+# Docker
+# ignore docker credentials or local docker files if any
+# .dockerignore
+
+# Cache
+.cache/
+.parcel-cache/
