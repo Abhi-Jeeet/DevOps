@@ -17,7 +17,7 @@ FROM node:22-alpine
 WORKDIR /app
 
 # copying everything from this main machine to the docker machine
-COPY . .
+COPY . . 
 
 #image creation or build the code
 RUN npm install 
